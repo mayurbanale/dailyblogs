@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='mystyle.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='960_12_col.css')}}">
+</head>
+<body>
+<form action="/Rinsert" method="POST">
+    <div class="form">
+        <input type="text" name="name" autocomplete="off" required />
+        <label for="name" class="label-name">
+            <span class="content-name">Name:</span>
+        </label>
+     </div>
+    
+     <div class="form-section">
+             <input type="email" name="email" autocomplete="off" required />
+             <label for="email" class="lname"><span class="cname">email:</span></label>
+     </div>
+     <div class="form-section2">
+         <input type="password" id="pswd1" name="pswd1" autocomplete="off" required />
+         <label for="password" class="lname1"><span class="cname1">password:</span></label>
+    </div>
+    <div class="form-section2">
+         <input type="password" id="pswd2" name="pswd2" autocomplete="off" required />
+         <label for="password" class="lname1"><span class="cname1">Confirm password:</span></label>
+        
+    </div>
+     <div class="btn">
+         <span id='message'> </span>
+         <input type="submit"  onclick="matchpassword()" value="Register">
+         
+     </div>
+     <div class="log">
+        <h3>Already have account ? <a href="login">Log in</a></h3>
+    </div>
+  </form> 
+     
+<!----match password script-->     
+<script>
+    function matchpassword(){
+        if (document.getElementById('pswd1').value ==
+          document.getElementById('pswd2').value) {
+          document.getElementById('message').style.color = 'green';
+          document.getElementById('message').innerHTML = 'PASSWORD MATCHED';
+      } else {
+      		document.getElementById('message').style.color = 'red';
+          document.getElementById('message').innerHTML = 'PASSWORD DID NOT MATCH.';
+          
+      }
+            
+    }
+</script>     
+</body>
+</html>

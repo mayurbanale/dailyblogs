@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='mystyle.css')}}">
+   <style>
+     
+   </style>
+</head>
+<body>
+    <h2>OOPs ! Something went wrong with post...</h2>
+    <div class="container">
+        <form action="/Update" method="POST">
+          
+          <input type="hidden" name="id" value="{{d.0}}">  
+
+          <label for="heading">TITLE HEADING:</label>
+          <input type="text" id="heading" name="titlename" value="{{d.1}}" required">
+      
+          <label for="date">DATE:</label>
+          <input type="date" id="date" name="date" value="{{d.2}}" required>
+          
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" style="height:200px" value="{{d.3}}" required></textarea>
+      
+          <input type="submit" name="send" value="Update">
+        </form>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,29 @@
+# PROJECT TITLE:
+Dailyblogs
+#
+
+
+http://127.0.0.1:5000/
+home('/')
+    registration page
+
+
+loging page:url
+http://127.0.0.1:5000/login
+
+
+facing this Error..
+"error in try block...!
+(1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+main page:url
+http://127.0.0.1:5000/index
+all three action you  will find on this index page...
+
+
+
+the only problem is in login page..
+sorry for the incomplete login task.
+if you'll get a free time please try to resolve the 
+error and please tell me also ,what was the problem
+i tried a lot 

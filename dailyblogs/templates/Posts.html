@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post blogs</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='mystyle.css')}}">
+    <!--<style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #5fa8d3;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #595f6e;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        input[type=date]{
+            margin-top:5px ;
+            width: 100%;
+            border-radius: 4px;
+            padding: 10px;
+            border: none;
+        }
+
+        input[type=submit]:hover {
+          background-color: #243257;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #a7d8f5;
+          padding: 20px;
+        }
+        </style>-->
+</head>
+<body>
+    <h2>Share Something...</h2>
+    <div class="container">
+        <form action="postinsert" method="POST">
+          <label for="heading">TITLE HEADING:</label>
+          <input type="text" id="heading" name="titlename" required">
+      
+          <label for="date">DATE:</label>
+          <input type="date" id="date" name="date" required>
+          </br>
+          </br>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject"  style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+</body>
+</html>

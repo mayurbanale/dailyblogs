@@ -1,0 +1,146 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+form {
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.form {
+  font-size: 20px;
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid;
+}
+
+.form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translatex(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translatey(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translatex(0%);
+}
+
+/*password*/
+.form-section {
+  font-size: 20px;
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.form-section input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.form-section label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid;
+}
+
+.form-section label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translatex(-100%);
+  transition: transform 0.3s ease;
+}
+
+.cname {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form-section input:focus + .lname .cname,
+.form input:valid + .lname .cname {
+  transform: translatey(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+
+.form-section input:focus + .lname::after,
+.form-section input:valid + .lname::after {
+  transform: translatex(0%);
+}
+
+/* BUTTON*/
+
+.btn input {
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background-color: #5fa8d3;
+  padding: 10px 40px;
+  display: block;
+}
+
+.msg {
+  color: red;
+  font-weight: 20px;
+}
